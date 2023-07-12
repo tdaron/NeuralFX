@@ -1,4 +1,4 @@
-module com.example.neuralfx {
+module org.kaporos.neuralfx {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.controlsfx.controls;
