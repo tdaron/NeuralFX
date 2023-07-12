@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+<HBox maxHeight="927.0" maxWidth="1800" minHeight="600.0" minWidth="400.0" prefHeight="927.0" prefWidth="1800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.kaporos.neuralfx.HelloController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="927.0" prefWidth="359.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <ColorPicker  fx:id="colorpicker">
+               <value>
+                  <Color red="0.1607843137254902" green="0.5019607843137255" blue="0.7254901960784313"/>
+               </value>
+            </ColorPicker>
+            <Button onAction="#clear" mnemonicParsing="false" text="Clear">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button onAction="#startInfiniteTrain" mnemonicParsing="false" text="Infinite train :D">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="trainButton" onAction="#startTrain" mnemonicParsing="false" text="Train 50 iterations">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button onAction="#draw" mnemonicParsing="false" text="Draw current">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button onAction="#resetNetwork" mnemonicParsing="false" text="Reset network">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Text fx:id="iterationsCount" text="Current iterations: 0">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+            <Text fx:id="currentLoss" text="Current Loss: Nan">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding></VBox>
+      <Canvas fx:id="canvas" height="927.0" onMousePressed="#onCanvasClick" width="1441.0" />
+   </children>
+</HBox>
